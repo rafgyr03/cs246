@@ -19,17 +19,22 @@ public class GuiTemp extends JPanel {
         Color murasaki = new Color(64,0,64,200);
         g.setColor(murasaki);
         g.fillOval(200, 5, 100, 100);
+         try {
+            TranspCursor curs = new TranspCursor();
+            curs.createCurs();
+        } catch (Exception ex) {
+            System.err.println("Error");
+        }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         JFrame f = new JFrame();
         f.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
                 System.exit(0);
             }
-        }
-        );
+        });
         f.setContentPane(new GuiTemp());
         f.setSize(320,150);
         f.setVisible(true);
