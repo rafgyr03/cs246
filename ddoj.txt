@@ -1,2 +1,6 @@
 05/22
 reviewed the tutorials we had and used a little bit of the code it had
+
+05/23
+tried combining classes with the javafx, can't figure out how to return
+to previous scene if closing a window using the closing button
